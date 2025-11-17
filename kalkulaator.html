@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Kalkulaator</title>
+  <script src="kalkulaatorScript.js"></script>
+  <link rel="stylesheet" type="text/css" href="kalkulaatorStyle.css">
+</head>
+<body onload="juhuslikPilt()">
+<div id="kalk1">
+  <h2>Saia kalkulaator</h2>
+  <label for="saiatyyp">Vali saia:</label>
+  <select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
+    <option value="vali">vali</option>
+    <option value="juustu">juustu</option>
+    <option value="mooni">mooni</option>
+    <option value="kaneeli">kaneeli</option>
+    <option value="lihaga">lihaga</option>
+  </select>
+  <label for="kogus">Kogus:</label>
+  <input type="number" id="kogus" min="1" max="10" step="1">
+  <div id="vastus"></div>
+  <button onclick="saiaKalk()">Arvuta</button>
+</div>
+
+<!-- Kalkulaator raadionuppudega -->
+<div id="kalk2">
+  <h2>Juhusliku (Random) pildi vastavus raadionupule</h2>
+  <img src="" alt="juhuslik pilt" id="random-pilt">
+  <br>
+  <strong>Vali pilt:</strong>
+  <br>
+  <input type="radio" name="valik" id="heart" value="img/heart.png" onclick="raadioKontroll()">
+  <label for="heart">Heart</label>
+  <br>
+  <input type="radio" name="valik" id="maja" value="img/maja.png" onclick="raadioKontroll()">
+  <label for="maja">Maja</label>
+  <br>
+  <input type="radio" name="valik" id="paike" value="img/paike.png" onclick="raadioKontroll()">
+  <label for="paike">Päike</label>
+  <br>
+  <input type="radio" name="valik" id="taht" value="img/taht.png" onclick="raadioKontroll()">
+  <label for="taht">Täht</label>
+  <div id="vastus2"></div>
+</div>
+
+<!-- Kalkulaator temperatuur -->
+<div id="kalk3">
+  <h2>Kraadide teisendamine</h2>
+  <label for="konversioontyyp">Vali konversioon:</label>
+  <select id="konversioontyyp">
+    <option value="vali1">Vali</option>
+    <option value="CelsiuseJargi">°F</option>
+    <option value="FahrenheitiJargi">°C</option>
+  </select>
+  <label for="tempValue">Temperatuur:</label>
+  <input type="number" id="tempValue">
+  <div id="vastus3"></div>
+  <button onclick="KraadideTeisendamine()">Arvuta</button>
+</div>
+
+<!-- g -->
+<div id="kalk4">
+  <h2>Vanuse Kalkulaator</h2>
+  <label for="synthimiseKuupaev">Sisesta sünnikuupäev:</label>
+  <input type="date" id="synthimiseKuupaev">
+  <button onclick="vanusKalk()">Arvuta vanus</button>
+  <div id="vastus4"></div>
+</div>
+</body>
+</html>

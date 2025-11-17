@@ -1,0 +1,17 @@
+#kalk1, #kalk2, #kalk3, #kalk4 {
+    border: solid 1px #373B4D;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    background-color: #ECECEF;
+}
+
+div#kalk1 h2, div#kalk2 h2, div#kalk3 h2, div#kalk4 h2 {
+    font-variant: small-caps;
+    font-family: Gabriola;
+    letter-spacing: 0.1cm;
+}
+
+img {
+    width: 10%;
+}
